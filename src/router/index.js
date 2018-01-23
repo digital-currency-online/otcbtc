@@ -14,12 +14,12 @@ export default new Router({
       component: Homepage
     },
     {
-      path: '/',
+      path: '/sign_in',
       name: 'SignIn',
       component: SignIn
     },
     {
-      path: '/',
+      path: '/sign_up',
       name: 'SignUp',
       component: SignUp
     }

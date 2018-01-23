@@ -2,16 +2,19 @@
   <div id="app">
     <top-navbar></top-navbar>
     <router-view/>
+    <bottom-info></bottom-info>
   </div>
 </template>
 
 <script>
 import TopNavbar from '@/components/topNavbar'
+import BottomInfo from '@/components/bottomInfo'
 
 export default {
   name: 'App',
   components: {
-    'top-navbar': TopNavbar
+    'top-navbar': TopNavbar,
+    'bottom-info': BottomInfo
   }
 }
 </script>
@@ -22,5 +25,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: #f8f9fa;
+}
+html{
+  font-size: 12px;
 }
 </style>

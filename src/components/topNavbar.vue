@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-width">
+  <div class="navbar-wrapper">
     <b-navbar toggleable="md" type="dark">
       <b-navbar-toggle target="nav_collapse" class="nav-toggle"></b-navbar-toggle>
       <b-navbar-brand href="#">
@@ -108,16 +108,59 @@ export default {
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  .navbar-width
+  .navbar-wrapper
     width 100%
     height 60px
     background-color #616161
     color #fff
     .navbar
+      padding 0
+      height 60px
+      .navbar-brand
+        padding-top 10px
+        margin-left 10px
+        z-index 3
+      .navbar-collapse
+        background-color #616161
+        z-index 2
+        .navbar-nav
+          a.nav-link
+            font-size 14px
+            position relative
+            padding-top 20px
+            padding-bottom 19px
+            padding-left 15px
+            padding-right 15px
+            color #fff
+          a.nav-link:hover
+            background-color #777
+          a.sign-in-btn
+            padding: 5px 12px !important;
+            margin: 5px 2px;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            border-radius: 2px;
+            border: 1px solid transparent;
+          a.sign-in-btn:hover
+            background-color: #43CB83;
+          a.sign-up-btn
+            padding: 5px 12px !important;
+            margin: 5px 2px;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            border-radius: 2px;
+            margin-left: 5px;
+            border: 1px solid #43CB83;
+          a.sign-up-btn:hover
+            background-color: #43CB83;
       .nav-toggle
         border none
         outline none
-      .navbar-toggler
-        span.navbar-toggler-icon
-          color #fff
+  @media (max-width: 768px)
+    .navbar-brand
+      position absolute
+      top 4px
+      left 36%
+    .navbar-collapse
+      margin-top 20px
 </style>
