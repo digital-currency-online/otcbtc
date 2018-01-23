@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <top-navbar></top-navbar>
     <router-view/>
   </div>
 </template>
 
 <script>
+import TopNavbar from '@/components/topNavbar'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'top-navbar': TopNavbar
+  }
 }
 </script>
 
@@ -17,7 +22,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
