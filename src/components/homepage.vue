@@ -37,7 +37,7 @@
                 </div>
               </div>
               <div class="currency-input">
-                <el-input-number v-model="amount" controls-position="right" @change="handleChange" placeholder="输入欲购买的法币金额" :min="1" :max="10"></el-input-number>
+                <el-input-number v-model="amount" controls-position="right" placeholder="输入欲购买的法币金额" :min="1" :max="10"></el-input-number>
               </div>
               <div class="search-button">
                 <input name="payment_type" value="all" hidden="hidden">
@@ -55,6 +55,7 @@
 export default {
   data () {
     return {
+      amount: '',
       currencyValue: '',
       fiatCurrencyValue: '',
       currencyOptions: [{
@@ -91,4 +92,44 @@ export default {
       background: url('../common/images/landing.png');
       background-position: center;
       background-size: cover;
+      .row
+        .col-md-12
+          p
+            font-size: 16px;
+            margin: 30px auto 30px;
+            letter-spacing: 3px;
+            line-height: 30px;
+      .container
+        .exchange-input
+          margin: 0 15% 30px 15%;
+          background-color: #ffffff;
+          color: #333333;
+          padding: 15px 10px;
+          border-radius: 3px;
+          form
+            .currency-select
+              .select-btc, .select-cny
+                float left
+                width 20%
+                span.select-text
+                  float: left;
+                  width: 50px;
+                  text-align: center;
+                  padding-top: 8px;
+                .el-select
+                  width: calc(100% - 50px);
+                  height: 40px;
+                  border: 1px solid #cccccc;
+            .currency-input
+              float: left;
+              width: 40%;
+              padding: 0 10px;
+              input
+                height: 40px;
+                border: 1px solid #cccccc;
+                letter-spacing: 0.5px;
+            .search-button
+              .el-button
+                width: 20%;
+                border-radius: 4px;
 </style>
